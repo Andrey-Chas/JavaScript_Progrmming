@@ -1,0 +1,28 @@
+﻿body {
+    background-image: url(pic_1.png);
+    background-size: cover;
+}
+
+.hbackground_1 {
+    background-color: blue;
+}
+
+.hbackground_2 {
+    background-color: red;
+}
+
+.hbackground_3 {
+    background-color: green;
+}
+
+.pbackground_1 {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.pbackground_2 {
+    background-color: red;
+}
+
+.pbackground_3 {
+    background-color: green;
+}

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavaScript_Progrmming", "JavaScript_Progrmming\JavaScript_Progrmming.csproj", "{773C0A23-5115-426A-90D4-4FB686AA00A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_HTML", "Lesson_HTML\Lesson_HTML.csproj", "{53133DC2-0C22-4EC2-9F7D-352907085750}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_HTML", "Lesson_HTML\Lesson_HTML.csproj", "{53133DC2-0C22-4EC2-9F7D-352907085750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_CSS", "Lesson_CSS\Lesson_CSS.csproj", "{2412F67D-3437-4B1E-8664-B9F11090D3B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{53133DC2-0C22-4EC2-9F7D-352907085750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53133DC2-0C22-4EC2-9F7D-352907085750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53133DC2-0C22-4EC2-9F7D-352907085750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2412F67D-3437-4B1E-8664-B9F11090D3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2412F67D-3437-4B1E-8664-B9F11090D3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2412F67D-3437-4B1E-8664-B9F11090D3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2412F67D-3437-4B1E-8664-B9F11090D3B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
