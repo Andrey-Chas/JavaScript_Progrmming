@@ -1,0 +1,35 @@
+﻿.main {
+    border: 5px solid;
+    padding: 20px 0px 20px 0px;
+}
+
+.inner-left-table {
+    border: 1px solid;
+}
+
+.inner-middle-table {
+    border: 1px solid;
+}
+
+.inner-right-table {
+    border: 1px solid;
+}
+
+.left-td {
+    border: 1px double;
+    width: 200px;
+    height: 200px;
+}
+
+.middle-td {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 100px;
+    height: 100px;
+}
+
+.right-td {
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+}
