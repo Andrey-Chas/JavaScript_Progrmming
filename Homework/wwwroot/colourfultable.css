@@ -1,0 +1,10 @@
+﻿table {
+    border: 3px groove;
+    width: 100px;
+}
+
+td {
+    border: 3px inset;
+    padding: 100px;
+    cursor: pointer;
+}
