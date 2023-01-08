@@ -6,51 +6,130 @@
     <link rel="stylesheet" type="text/css" href="memorygame.css" />
 </head>
 <body>
-    
-    <h1>Memory Game</h1>
 
-    <table id="mainMenu">
+    <h1 class="align">Memory Game</h1>
+
+    <table class="menu" id="mainMenu">
         <tr>
             <th>
                 Menu
             </th>
         </tr>
         <tr>
-            <td onclick="createGame()">
-                Create game
+            <td>
+                <button type="button" onclick="createGame()">Create game</button>
             </td>
         </tr>
     </table>
 
-    <table style="visibility:hidden" id="createGame">
+    <table class="menu" style="visibility:hidden" id="createGame">
         <tr>
             <th>
-                Select the size of the field
+                Select the size of the field and type of the cards
             </th>
         </tr>
         <tr>
             <td>
-                <select>
-                    <option>
+                <select id="size">
+                    <option value="small">
                         3x4
                     </option>
-                    <option>
+                    <option value="medium">
                         4x4
                     </option>
-                    <option>
+                    <option value="large">
                         5x4
                     </option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td onclick="start()">
-                Start
+            <td>
+                <select id="type">
+                    <option value="cats">
+                        Cats
+                    </option>
+                    <option value="dogs">
+                        Dogs
+                    </option>
+                    <option value="dinosaurs">
+                        Dinosaurs
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="next()">Next</button>
             </td>
         </tr>
     </table>
 
-    <table style="visibility: hidden; margin: 0px auto 0px auto" id="field1">
+    <table class="menu" style="visibility:hidden" id="numberOfPlayers">
+        <tr>
+            <th>
+                Select the number of players
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <select id="players">
+                    <option value="one" id="option1">
+                        1
+                    </option>
+                    <option value="two" id="option2">
+                        2
+                    </option>
+                    <option hidden value="three" id="option3">
+                        3
+                    </option>
+                    <option hidden value="four" id="option4">
+                        4
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="playerName()">Next</button>
+            </td>
+        </tr>
+    </table>
+
+    <table class="menu" style="visibility: hidden; text-align: center" id="nameOfPlayers">
+        <tr>
+            <th>
+                Type the name of the players
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" value="Player 1" id="n1" />
+            </td>
+        </tr>
+        <tr style="visibility: collapse" id="nameTwoPl">
+            <td>
+                <input type="text" value="Player 2" id="n2" />
+            </td>
+        </tr>
+        <tr style="visibility: collapse" id="nameThreePl">
+            <td>
+                <input type="text" value="Player 3" id="n3" />
+            </td>
+        </tr>
+        <tr style="visibility: collapse" id="nameFourPl">
+            <td>
+                <input type="text" value="Player 4" id="n4" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="startbtn" type="button" onclick="start()">Start</button>
+            </td>
+        </tr>
+    </table>
+
+    <table style="position: absolute; right: 0px; left: 0px; visibility: hidden; margin: 0px auto 0px auto" id="field1">
         <tr>
             <td id="a1">
                 <div class="card" onclick="takeImage(0)">
@@ -129,7 +208,99 @@
                 </div>
             </td>
         </tr>
+        <tr style="visibility:hidden" id="sMedium">
+            <td id="a13">
+                <div class="card" onclick="takeImage(12)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p13" />
+                </div>
+            </td>
+            <td id="a14">
+                <div class="card" onclick="takeImage(13)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p14" />
+                </div>
+            </td>
+            <td id="a15">
+                <div class="card" onclick="takeImage(14)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p15" />
+                </div>
+            </td>
+            <td id="a16">
+                <div class="card" onclick="takeImage(15)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p16" />
+                </div>
+            </td>
+        </tr>
+        <tr style="visibility:hidden" id="sLarge">
+            <td id="a17">
+                <div class="card" onclick="takeImage(16)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p17" />
+                </div>
+            </td>
+            <td id="a18">
+                <div class="card" onclick="takeImage(17)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p18" />
+                </div>
+            </td>
+            <td id="a19">
+                <div class="card" onclick="takeImage(18)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p19" />
+                </div>
+            </td>
+            <td id="a20">
+                <div class="card" onclick="takeImage(19)">
+                    <img class="front" src="image-front.png" alt="backImg" />
+                    <img class="back" alt="backImg" id="p20" />
+                </div>
+            </td>
+        </tr>
     </table>
+
+    <table style="visibility: hidden" class="right" id="playersTable">
+        <tr>
+            <td>
+                <div style="font-size: 20px; text-align: center" id="pl1">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="font-size: 20px; text-align: center; visibility: collapse" id="pl2">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="font-size: 20px; text-align: center; visibility: collapse" id="pl3">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="font-size: 20px; text-align: center; visibility: collapse" id="pl4">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="font-size: 50px; text-align: center; visibility: collapse" id="turn">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="position: absolute; right: 0px; left: 0px; visibility: collapse; text-align: center" id="win">
+        <h2 class="align" id="message"></h2>
+        <div style="font-size: 20px" id="winnersPl">
+        </div>
+        <button class="resetbtn" type="button" onclick="reloadPage()">Reset</button>
+    </div>
 
     <script src="memorygame.js"></script>
 </body>
