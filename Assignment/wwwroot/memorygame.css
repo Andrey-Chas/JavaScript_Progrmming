@@ -42,6 +42,12 @@ select:hover {
     transition: 0.2s;
 }
 
+.backbtn:hover {
+    background-color: red;
+    color: white;
+    transition: 0.2s;
+}
+
 select {
     width: 100px;
     background-color: white; 

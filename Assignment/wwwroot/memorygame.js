@@ -63,6 +63,11 @@ function next() {
     document.getElementById("numberOfPlayers").style.visibility = "visible";
 }
 
+function backToCreateGame() {
+    document.getElementById("createGame").style.visibility = "collapse";
+    document.getElementById("mainMenu").style.visibility = "visible";
+}
+
 function playerName() {
     document.getElementById("numberOfPlayers").style.visibility = "collapse";
     document.getElementById("nameOfPlayers").style.visibility = "visible";
@@ -79,6 +84,14 @@ function playerName() {
         document.getElementById("nameThreePl").style.visibility = "visible";
         document.getElementById("nameFourPl").style.visibility = "visible";
     }
+}
+
+function backToNext() {
+    document.getElementById("numberOfPlayers").style.visibility = "collapse";
+    document.getElementById("createGame").style.visibility = "visible";
+    document.getElementById("players").selectedIndex = 0;
+    document.getElementById("option3").setAttribute("hidden", "hidden");
+    document.getElementById("option4").setAttribute("hidden", "hidden");
 }
 
 function start() {
@@ -166,6 +179,14 @@ function start() {
             placeCards(dinosaursField3);
         }
     }
+}
+
+function backToTheNumberOfPlayers() {
+    document.getElementById("nameOfPlayers").style.visibility = "collapse";
+    document.getElementById("numberOfPlayers").style.visibility = "visible";
+    document.getElementById("nameTwoPl").style.visibility = "collapse";
+    document.getElementById("nameThreePl").style.visibility = "collapse";
+    document.getElementById("nameFourPl").style.visibility = "collapse";
 }
 
 function shuffleArray(array) {
